@@ -8,20 +8,14 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <EditText
+        android:id="@+id/editText1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose clear rate (1-5)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:ems="10"
+        android:hint="Enter clear rate"
+        android:inputType="number" />
 
-    <RatingBar
-
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:rating="0"
-        android:stepSize="1" />
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"

@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RatingBar;
 
 public class FirstActivity extends AppCompatActivity {
 
@@ -19,10 +18,9 @@ public class FirstActivity extends AppCompatActivity {
     }
 
     public void sendMethod (View v){
-
+        String data1=((EditText)findViewById(R.id.editText1)).getText().toString();
         Intent bakasha1=new Intent(this,SecondActivity.class);
-        int r1= (int)((RatingBar)findViewById(R.id.editText1)).getRating();
-        bakasha1.putExtra(KEY_SEND1,r1);
+        bakasha1.putExtra(KEY_SEND1,data1);
 startActivity(bakasha1);
     }
 }
