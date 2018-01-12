@@ -24,10 +24,10 @@ public class LastActivity extends AppCompatActivity {
         bill= (EditText)findViewById(R.id.editTextBill);
         tip=(TextView)findViewById(R.id.textViewTip);
         sah=findViewById(R.id.textViewTotal);
-        String  tip1 = getIntent().getStringExtra(SecondActivity.KEY_SEND);
-        String  tip2 = getIntent().getStringExtra(SecondActivity.KEY_SEND2);
-        tips= Integer.parseInt(tip1)+Integer.parseInt(tip2);
-        String tipstr=Integer.toString(tips);
+        int  tip1 = getIntent().getIntExtra(SecondActivity.KEY_SEND,2);
+        int  tip2 = getIntent().getIntExtra(SecondActivity.KEY_SEND2,3);
+        tips= tip1+tip2;
+        String tipstr=Integer.toString(tips)+" %";
         tip.setText(tipstr);
     }
 
